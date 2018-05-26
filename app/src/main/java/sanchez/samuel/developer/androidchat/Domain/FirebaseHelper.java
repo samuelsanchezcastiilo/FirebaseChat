@@ -21,10 +21,18 @@ public class FirebaseHelper {
     private final static String FIRBASE_URL = "https://chat-9518f.firebaseio.com/\n";
 
     private static  class SingletonHolder{
+
         private static final FirebaseHelper INSTANCE = new FirebaseHelper();
     }
 
-    public FirebaseHelper() {
+
+    public static FirebaseHelper getIntance(){
+        return SingletonHolder.INSTANCE;
+    }
+
+    public FirebaseHelper()
+    {
+
         database = FirebaseDatabase.getInstance().getReference();
 
     }

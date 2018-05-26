@@ -41,6 +41,7 @@ private  LoginPresenter loginPresenter;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        loginPresenter = new LoginPresenterImpl(this);
 
 
 

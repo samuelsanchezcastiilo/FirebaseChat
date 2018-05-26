@@ -1,11 +1,12 @@
 package sanchez.samuel.developer.androidchat.Login;
 
 public class LoginPresenterImpl implements LoginPresenter {
-    LoginView loginView;
-    LoginInterator loginInterator;
+    private LoginView loginView;
+    private LoginInterator loginInterator;
 
     public LoginPresenterImpl(LoginView loginView) {
         this.loginView = loginView;
+        this.loginInterator =  new LoginIteratorImpl();
     }
 
     @Override
