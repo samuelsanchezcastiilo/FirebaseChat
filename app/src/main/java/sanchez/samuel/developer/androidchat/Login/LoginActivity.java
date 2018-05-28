@@ -42,6 +42,7 @@ private  LoginPresenter loginPresenter;
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
         loginPresenter = new LoginPresenterImpl(this);
+        loginPresenter.checkForAuthenticatedUser();
 
 
 
@@ -74,13 +75,13 @@ private  LoginPresenter loginPresenter;
 
 
     }
-@OnClick(R.id.button_action_signin)
+@OnClick(R.id.button_action_signup)
     @Override
     public void handleSingUp() {
     loginPresenter.registerNewUser(inputEmail.getText().toString(),
                                 passWord.getText().toString());
     }
-
+    @OnClick(R.id.button_action_signin)
     @Override
     public void handleSingIn() {
         loginPresenter.validateLoginUser(inputEmail.getText().toString(),

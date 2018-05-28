@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login.LoginActivity"
-    android:id="@+id/©"
+    android:id="@+id/container"
 
 
     >
@@ -72,6 +72,7 @@
         android:id="@+id/progres_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_below="@+id/content_action_buttons"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>
